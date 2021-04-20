@@ -334,7 +334,7 @@ that is working switch to a production issuer.
 
 Create this definition locally and update the email address to your own. This
 email required by Let's Encrypt and used to notify you of certificate
-expiration and updates.
+expiration and updates. According to the [new requirements](https://cert-manager.io/docs/configuration/acme/#use-an-alternative-certificate-chain) the field `preferredChain` must be set.
 
 {{% include file="../example/staging-issuer.yaml" language="yaml" %}}
 
@@ -346,7 +346,7 @@ issuer.cert-manager.io "letsencrypt-staging" created
 ```
 
 Also create a production issuer and deploy it. As with the staging issuer, you
-will need to update this example and add in your own email address.
+will need to update this example and add in your own email address. According to the [new requirements](https://cert-manager.io/docs/configuration/acme/#use-an-alternative-certificate-chain) the field `preferredChain` must be set.
 
 {{% include file="../example/production-issuer.yaml" language="yaml" %}}
 
